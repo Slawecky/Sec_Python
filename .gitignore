@@ -99,7 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
-/home/slawecky/GIT/Sec_Python/Dane/*
 
 # User-specific stuff:
 .idea/**/workspace.xml
@@ -147,3 +146,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Moje pliki
+/Dane/secrets.py
+

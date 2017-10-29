@@ -1,2 +1,2 @@
 login = "comsitecomputer@gmail.com"
-haslo = "1234"
+haslo = ""

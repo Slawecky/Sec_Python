@@ -99,4 +99,5 @@ ENV/
 
 # mypy
 .mypy_cache/
-*.secrets.py
+/home/slawecky/GIT/Sec_Python/Dane/*
+

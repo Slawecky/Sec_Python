@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+# __pycache__/
 *.py[cod]
 *$py.class
 
@@ -149,4 +149,5 @@ fabric.properties
 
 # Moje pliki
 /Dane/secrets.py
+/home/slawecky/GIT/Sec_Python/Dane/secrets.py
 

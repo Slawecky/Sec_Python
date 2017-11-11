@@ -39,10 +39,10 @@ for x in range(10):
     # Set the output to 1 = High
     board.digital_write(BOARD_LED, 1)
     # Wait a half second between toggles.
-    time.sleep(.10)
+    time.sleep(.50)
     # Set the output to 0 = Low
     board.digital_write(BOARD_LED, 0)
-    time.sleep(.10)
+    time.sleep(.50)
 
 # Close PyMata when we are done
 board.close()

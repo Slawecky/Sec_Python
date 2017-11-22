@@ -4,21 +4,27 @@
 
 import sys
 import signal
+from tkinter import *
 from time import sleep
 
 from PyMata.pymata import PyMata
 
 # Podpięte piny Digital 9, 10, 11
 
-blue = 9
+blue = 11
 red = 10
-green = 11
+green = 9
 pausa = 0.01
 
 
 
 
 board = PyMata("/dev/ttyACM0", verbose=True)
+okno = Tk()
+
+etykieta = Label(okno, text = " Start ")
+etykieta.pack()
+okno.mainloop()
 
 def signal_handler(sig, frame):
     print('You pressed Ctrl+C')

@@ -1,15 +1,14 @@
 #Test działania modułu RGB-LED KY-016 wesja Analog
 
+import sys
 import signal
 from tkinter import *
-from time import sleep
 from PyMata.pymata import PyMata
 
 # Podpięte piny Digital 9, 10, 11
 blue = 11
 red = 10
 green = 9
-pausa = 0.01
 board = PyMata("/dev/ttyACM0", verbose=True)
 
 # Ustawienie modułu piny blue, green, red PWM
@@ -28,20 +27,24 @@ signal.signal(signal.SIGINT, signal_handler)
 def rgb_led (pin, poz):
     board.analog_write(pin, poz)
 
-for x in range(2):
-    sleep(pausa)
-    for li in range(255):
-        rgb_led(blue,li)
-        sleep(pausa)
-    rgb_led(blue, 0)
-    for li in range(255):
-        rgb_led(red, li)
-        sleep(pausa)
-    rgb_led(red, 0)
-    for li in range(255):
-        rgb_led(green, li)
-        sleep(pausa)
-    rgb_led(green, 0)
-    sleep(1)
+
+def rd(val):
+    rgb_led(red, int(val))
+def gr(val):
+    rgb_led(green, int(val))
+def bl(val):
+    rgb_led(blue, int(val))
+
+master = Tk()
+r = Scale(master, from_=0, to=255, command=(rd))
+r.pack()
+g = Scale(master, from_=0, to=255,command=(gr))
+g.pack()
+b = Scale(master, from_=0, to=255, command=(bl))
+b.pack()
+
+mainloop()
+
+
 board.close()
 board.reset()

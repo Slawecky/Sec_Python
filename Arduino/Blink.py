@@ -1,8 +1,5 @@
 # Zamryga czy nie zamryga oto jest pytanie
 
-
-
-
 import time
 import sys
 import signal
@@ -15,7 +12,9 @@ from PyMata.pymata import PyMata
 BOARD_LED = 13
 
 # Create a PyMata instance
-board = PyMata("/dev/ttyACM0", verbose=True)
+# Linux
+# board = PyMata("/dev/ttyACM0", verbose=True)
+board = PyMata("\.\COM4", verbose=True)
 
 
 def signal_handler(sig, frame):

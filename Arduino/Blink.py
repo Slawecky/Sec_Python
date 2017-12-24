@@ -16,8 +16,6 @@ BOARD_LED = 13
 # board = PyMata("/dev/ttyACM0", verbose=True)
 board = PyMata("\.\COM4", verbose=True)
 
-
-
 def signal_handler(sig, frame):
     print('You pressed Ctrl+C')
     if board is not None:

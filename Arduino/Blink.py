@@ -15,6 +15,7 @@ BOARD_LED = 13
 # Linux
 # board = PyMata("/dev/ttyACM0", verbose=True)
 board = PyMata("\.\COM4", verbose=True)
+# test
 
 
 def signal_handler(sig, frame):
